@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
+const { withFramworkConfig } = require('./framework/common/config')
+
 const nextConfig = {
   reactStrictMode: true,
 }
 
 module.exports = nextConfig
-module.exports = {
+module.exports = withFramworkConfig({
   i18n: {
-    locales: ['en', 'es'],
+    locales: ['en-US', 'es'],
     defaultLocale: 'en-US',
   },
-}
+})
+
+console.log('next.config.js', JSON.stringify(module.exports, null, 2))
