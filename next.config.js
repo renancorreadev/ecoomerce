@@ -7,6 +7,9 @@ const nextConfig = {
 
 module.exports = nextConfig
 module.exports = withFramworkConfig({
+  framework: {
+    name: 'shopify',
+  },
   i18n: {
     locales: ['en-US', 'es'],
     defaultLocale: 'en-US',

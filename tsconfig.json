@@ -30,13 +30,10 @@
         "framework/shopify"
       ],
       "@framework/*": [
-        "shopify/src/*"
+        "framework/shopify/*"
       ],
       "@utils/*": [
         "framework/shopify/utils/*"
-      ],
-      "@framework/": [
-        "shopify/src/"
       ]
     }
   },
