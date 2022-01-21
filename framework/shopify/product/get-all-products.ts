@@ -1,4 +1,5 @@
 import getAllProductsQuery from '../utils/queries/get-all-products'
+import { normalizeProduct } from '../utils/normalize'
 import fetchApi from '../utils/fetch-api'
 import { ProductConnection } from '../schema'
 
@@ -11,7 +12,7 @@ const getAllProducts = async (): Promise<any> => {
   //Normalize and return the data
   const products =
     data.products.edges.map(({ node: product }) => {
-      return product
+      return normalizeProduct(product)
     }) ?? []
   return products
 }
