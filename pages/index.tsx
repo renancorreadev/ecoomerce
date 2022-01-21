@@ -14,7 +14,7 @@ export async function getStaticProps() {
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <div>{products ? JSON.stringify(products) : <h2>error!</h2>}</div>
+  return <div>{JSON.stringify(products)}</div>
 }
 
 export const teste = 'teste'
