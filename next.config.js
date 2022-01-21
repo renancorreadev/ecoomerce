@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const { withFramworkConfig } = require('./framework/common/config')
+const { withFramworkConfig } = require('./src/framework/common/config')
 
 const nextConfig = {
   reactStrictMode: true,
