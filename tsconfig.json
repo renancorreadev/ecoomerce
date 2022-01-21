@@ -31,12 +31,6 @@
       ],
       "@framework/*": [
         "framework/shopify/*"
-      ],
-      "@utils/*": [
-        "framework/shopify/utils/*"
-      ],
-      "@framework/": [
-        "shopify/src/"
       ]
     }
   },
