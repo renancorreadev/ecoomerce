@@ -1,13 +1,31 @@
-import { Product as ShopifyProduct } from '../schema'
+import { ImageEdge, Product as ShopifyProduct } from '../schema'
+
+function normalizeProductImages({ edges }: { edges: Array<ImageEdge> }) {
+  return edges.map(({ node: { originalSrc: url, ...rest } }) => {
+    return {
+      url: `/images/${url}`,
+      ...rest,
+    }
+  })
+}
 
 export function normalizeProduct(productNode: ShopifyProduct): any {
-  const { id, title: name, handle, vendor, description, ...rest } = productNode
+  const {
+    id,
+    title: name,
+    handle,
+    vendor,
+    description,
+    images: imageConnection,
+    ...rest
+  } = productNode
   const product = {
     id,
     name,
     vendor,
     description,
     path: `${handle}`,
+    images: normalizeProductImages(imageConnection),
     slug: handle.replace(/^\/+|\/+$/g, ''),
     ...rest,
   }
