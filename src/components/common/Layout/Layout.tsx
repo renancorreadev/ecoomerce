@@ -1,6 +1,6 @@
-import { FC } from 'react'
+import { FunctionComponent } from 'react'
 
-const Layout: FC = ({ children }) => {
+const Layout: FunctionComponent = ({ children }) => {
   return <div className="layout">{children}</div>
 }
 
