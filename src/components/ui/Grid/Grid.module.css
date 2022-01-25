@@ -6,25 +6,28 @@
   }
 
   & > * {
-    @apply row-span-2 overflow-hidden;
+    @apply row-span-1 overflow-hidden;
     height: 500px;
     max-height: 800px;
 
     @screen lg {
       height: inherit;
-      /* max-height: 100%; */
+      max-height: 100%;
     }
   }
 }
 
 .layoutA {
+  /* 1, 7, 13 */
+  /* 5, 11, 17 */
   & > *:nth-child(6n + 1),
   & > *:nth-child(6n + 5) {
     @screen lg {
-      @apply col-span-2 row-span-3;
+      @apply col-span-2 row-span-2;
     }
   }
 }
+
 .layoutB {
   color: red;
 }
