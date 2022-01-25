@@ -3,7 +3,7 @@ import getAllproducts from '@framework/product/get-all-products'
 import { getConfig } from '@framework/api/config'
 import { Layout } from '@components/common'
 import { ProductCard } from '@components/product'
-import { Grid } from '@components/ui'
+import { Grid, Hero } from '@components/ui'
 
 export async function getStaticProps() {
   const config = getConfig()
@@ -25,6 +25,10 @@ export default function Home({
           <ProductCard key={product.id} product={product} />
         ))}
       </Grid>
+      <Hero
+        headline="Cookies, ice cream and muffin"
+        description="Cake sweet gummies biscuit liquorice cookie caramels lollipop bonbon. Lemon drops marshmallow gummi bears danish croissant lemon drops macaroon sweet roll. Dessert jelly beans cake fruitcake choco"
+      />
     </>
   )
 }
