@@ -10,8 +10,8 @@ interface HeroProps {
 
 const Hero: FC<HeroProps> = ({ headline, description }) => {
   return (
-    <Container className="px-11 mx-auto bg-black p-8 max-w-8xl">
-      <div className="bg-black">
+    <div className="bg-black">
+      <Container className="px-11 mx-auto bg-black p-8 max-w-8xl">
         <div className={styles.root}>
           <h2 className={styles.headline}>{headline}</h2>
 
@@ -23,8 +23,8 @@ const Hero: FC<HeroProps> = ({ headline, description }) => {
             <a className={styles.link}>Read it here</a>
           </Link>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   )
 }
 

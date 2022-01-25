@@ -1,9 +1,9 @@
-import { ReactNode, FC, HTMLAttributes } from 'react'
+import { ReactNode, FC, ComponentType, HTMLAttributes } from 'react'
 
 interface ContainerProps {
   children: ReactNode | ReactNode[]
   className?: HTMLAttributes<HTMLDivElement>['className']
-  element?: any
+  element?: ComponentType<HTMLAttributes<HTMLElement>>
 }
 
 const Container: FC<ContainerProps> = ({
