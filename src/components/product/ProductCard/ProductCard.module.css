@@ -1,5 +1,15 @@
 .root {
-  @apply relative;
+  @apply relative max-h-full;
+
+  &:hover {
+    & .productBG:before {
+      transform: scale(0.99);
+    }
+
+    & .productImage {
+      transform: scale(1.25);
+    }
+  }
 
   &:nth-child(6n + 1) .productBG {
     @apply bg-violet;
@@ -33,13 +43,15 @@
   top: 1rem;
   box-decoration-break: clone;
 }
-
+.productImage {
+  @apply transition-transform;
+}
 .productBG {
   @apply absolute inset-0 z-0;
   background-color: #212529;
 
   &:before {
-    @apply block w-full h-full;
+    @apply transition-transform block w-full h-full;
     content: '';
     background-image: url('/product-pattern.svg');
   }
