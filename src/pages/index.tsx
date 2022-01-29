@@ -29,7 +29,17 @@ export default function Home({
         headline="Cookies, ice cream and muffin"
         description="Cake sweet gummies biscuit liquorice cookie caramels lollipop bonbon. Lemon drops marshmallow gummi bears danish croissant lemon drops macaroon sweet roll. Dessert jelly beans cake fruitcake choco"
       />
-      <Marquee>
+      <Marquee variant="primary">
+        {products.slice(0.3).map((product) => (
+          <ProductCard variant="slim" key={product.id} product={product} />
+        ))}
+      </Marquee>
+      <Grid layout="B">
+        {products.slice(0.3).map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </Grid>
+      <Marquee variant="secondary">
         {products.slice(0.3).map((product) => (
           <ProductCard variant="slim" key={product.id} product={product} />
         ))}
