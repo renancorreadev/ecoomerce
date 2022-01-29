@@ -2,10 +2,10 @@ import { FC } from 'react'
 
 interface SideBarProps {
   children: any
+  isOpen: boolean
 }
 
-const Sidebar: FC<SideBarProps> = ({ children }) => {
-  const isOpen = true
+const Sidebar: FC<SideBarProps> = ({ children, isOpen }) => {
   return (
     <>
       {isOpen ? (

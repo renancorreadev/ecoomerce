@@ -1,5 +1,7 @@
 import { AppProps } from 'next/app'
 import { FunctionComponent } from 'react'
+import { UIProvider } from '@components/ui/context'
+
 import '@styles/main.css'
 
 const Noop: FunctionComponent = ({ children }) => <>{children}</>
@@ -11,8 +13,10 @@ export default function App({
   const Layout = Component.Layout ?? Noop
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <UIProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </UIProvider>
   )
 }
