@@ -9,6 +9,8 @@
     "build:css": "postcss src/styles/main.css -o src/styles/main_build.css"
   },
   "dependencies": {
+    "@types/body-scroll-lock": "^3.1.0",
+    "body-scroll-lock": "^4.0.0-beta.0",
     "next": "12.0.8",
     "react": "17.0.2",
     "react-dom": "17.0.2",

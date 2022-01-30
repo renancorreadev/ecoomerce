@@ -1,4 +1,9 @@
-import { FC } from 'react'
+import { FC, useEffect, useRef } from 'react'
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from 'body-scroll-lock'
 
 interface SideBarProps {
   children: any
@@ -7,10 +12,27 @@ interface SideBarProps {
 }
 
 const Sidebar: FC<SideBarProps> = ({ children, isOpen, onClose }) => {
+  const ref = useRef() as React.MutableRefObject<HTMLDivElement>
+
+  //Sera ativado o efeito se o valor de isOpen for alterado...
+  useEffect(() => {
+    if (ref.current) {
+      if (isOpen) {
+        disableBodyScroll(ref.current)
+      } else {
+        enableBodyScroll(ref.current)
+      }
+    }
+
+    return () => {
+      clearAllBodyScrollLocks()
+    }
+  }, [isOpen])
+
   return (
     <>
       {isOpen ? (
-        <div className="fixed inset-0 overflow-hidden h-full z-50">
+        <div ref={ref} className="fixed inset-0 overflow-hidden h-full z-50">
           <div className="absolute inset-0 overflow-hidden">
             <div
               onClick={onClose}
