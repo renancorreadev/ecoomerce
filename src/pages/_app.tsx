@@ -1,15 +1,13 @@
-import { AppProps } from 'next/app'
-import { FunctionComponent } from 'react'
-import { UIProvider } from '@components/ui/context'
 
-import '@styles/main.css'
+import "@assets/main.css"
+import 'keen-slider/keen-slider.min.css'
+import { AppProps } from "next/app"
+import { FC } from "react"
+import { UIProvider } from "@components/ui/context"
 
-const Noop: FunctionComponent = ({ children }) => <>{children}</>
+const Noop: FC = ({children}) => <>{children}</>
 
-export default function App({
-  Component,
-  pageProps,
-}: AppProps & { Component: { Layout: FunctionComponent } }) {
+function MyApp({Component, pageProps}: AppProps & {Component: {Layout: FC}}) {
   const Layout = Component.Layout ?? Noop
 
   return (
@@ -20,3 +18,5 @@ export default function App({
     </UIProvider>
   )
 }
+
+export default MyApp

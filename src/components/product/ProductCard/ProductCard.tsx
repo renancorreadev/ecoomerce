@@ -1,65 +1,62 @@
-import { Product } from '@common/types/products'
-import { FC } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import styles from './ProductCard.module.css'
+import { Product } from "@common/types/product"
+import { FC } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import styles from "./ProductCard.module.css"
 
-interface ProductProps {
+interface Props {
   product: Product
-  variant?: 'simple' | 'slim'
+  variant?: "simple" | "slim"
 }
-const productImage = '/product-image-placeholder.svg'
-const ProductCard: FC<ProductProps> = ({ product, variant = 'simple' }) => {
+const placeholderImage = "/product-image-placeholder.svg"
+const ProductCard: FC<Props> = ({product, variant = "simple"}) => {
+
   return (
-    // eslint-disable-next-line @next/next/link-passhref
-    <Link href={`products/${product.slug}`}>
+    <Link href={`/products/${product.slug}`}>
       <a className={styles.root}>
-        {variant === 'slim' ? (
+        { variant === "slim" ?
           <>
-            <div className="inset-0 flex items-center justify-center absolute z-20 ">
+            <div className="inset-0 flex items-center justify-center absolute z-20">
               <span className="bg-black text-white p-3 font-bold text-xl">
                 {product.name}
               </span>
             </div>
-
-            {product.images && (
+            { product.images && (
               <Image
                 className={styles.productImage}
-                alt={product.name}
-                src={product.images[0].url ?? productImage}
-                width={320}
+                alt={product.name ?? "Product image"}
+                src={product.images[0].url ?? placeholderImage}
                 height={320}
+                width={320}
                 quality="85"
                 layout="fixed"
               />
             )}
-          </>
-        ) : (
+          </> : (
           <>
-            <div className={styles.productBG} />
-            <div className={styles.productTag}>
-              <h3 className={styles.productTitle}>
-                {' '}
-                <span> {product.name}</span>{' '}
-              </h3>
-              <span className={styles.productPrice}>
-                {product.price.value} {product.price.currencyCode}
-              </span>
-
-              {product.images && (
+            <div className={styles.productBg}></div>
+              <div className={styles.productTag}>
+                <h3 className={styles.productTitle}>
+                  <span>{product.name}</span>
+                </h3>
+                <span className={styles.productPrice}>
+                  {product.price.value} {product.price.currencyCode}
+                </span>
+              </div>
+              { product.images && (
                 <Image
                   className={styles.productImage}
-                  alt={product.name}
-                  src={product.images[0].url ?? productImage}
-                  width={540}
+                  alt={product.name ?? "Product image"}
+                  src={product.images[0].url ?? placeholderImage}
                   height={540}
+                  width={540}
                   quality="85"
                   layout="responsive"
                 />
               )}
-            </div>
           </>
-        )}
+          )
+        }
       </a>
     </Link>
   )

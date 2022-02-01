@@ -1,12 +1,15 @@
+
+
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
+  purge: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       maxWidth: {
-        '8xl': '1920px',
+        "8xl": "1920px"
       },
       colors: {
         primary: 'var(--primary)',
@@ -38,8 +41,11 @@ module.exports = {
         base: 'var(--text-base)',
         primary: 'var(--text-primary)',
         secondary: 'var(--text-secondary)',
-      },
+      }
     },
+  },
+  variants: {
+    extend: {},
   },
   plugins: [],
 }

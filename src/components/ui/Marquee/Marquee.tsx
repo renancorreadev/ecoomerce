@@ -1,21 +1,21 @@
 import { ReactNode, FC } from 'react'
-import styles from './Marquee.module.css'
 import Ticker from 'react-ticker'
+import styles from './Marquee.module.css'
 import cn from 'classnames'
 
-interface MarqueeProps {
+interface Props {
   children: ReactNode[]
   variant?: 'primary' | 'secondary'
 }
 
-const Marquee: FC<MarqueeProps> = ({ children, variant = 'primary' }) => {
+const Marquee: FC<Props> = ({ children, variant = 'primary' }) => {
   const rootClassName = cn(styles.root, {
     [styles.secondary]: variant === 'secondary',
   })
 
   return (
     <div className={rootClassName}>
-      <Ticker>
+      <Ticker offset={80}>
         {() => <div className={styles.container}>{children}</div>}
       </Ticker>
     </div>

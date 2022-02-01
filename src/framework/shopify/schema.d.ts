@@ -70,11 +70,11 @@ export type AppliedGiftCard = Node & {
 export type Article = Node & {
   __typename?: 'Article'
   /**
-   * The article's author.
+   * The article'styles author.
    * @deprecated Use `authorV2` instead
    */
   author: ArticleAuthor
-  /** The article's author. */
+  /** The article'styles author. */
   authorV2?: Maybe<ArticleAuthor>
   /** The blog that the article belongs to. */
   blog: Blog
@@ -96,11 +96,11 @@ export type Article = Node & {
   image?: Maybe<Image>
   /** The date and time when the article was published. */
   publishedAt: Scalars['DateTime']
-  /** The article’s SEO information. */
+  /** The article’styles SEO information. */
   seo?: Maybe<Seo>
   /** A categorization that a article can be tagged with. */
   tags: Array<Scalars['String']>
-  /** The article’s name. */
+  /** The article’styles name. */
   title: Scalars['String']
   /** The url pointing to the article accessible from the web. */
   url: Scalars['URL']
@@ -136,15 +136,15 @@ export type ArticleImageArgs = {
 /** The author of an article. */
 export type ArticleAuthor = {
   __typename?: 'ArticleAuthor'
-  /** The author's bio. */
+  /** The author'styles bio. */
   bio?: Maybe<Scalars['String']>
-  /** The author’s email. */
+  /** The author’styles email. */
   email: Scalars['String']
-  /** The author's first name. */
+  /** The author'styles first name. */
   firstName: Scalars['String']
-  /** The author's last name. */
+  /** The author'styles last name. */
   lastName: Scalars['String']
-  /** The author's full name. */
+  /** The author'styles full name. */
   name: Scalars['String']
 }
 
@@ -182,7 +182,7 @@ export enum ArticleSortKeys {
   Id = 'ID',
   /**
    * During a search (i.e. when the `query` parameter has been specified on the connection) this sorts the
-   * results by relevance to the search term(s). When no search query is specified, this sort key is not
+   * results by relevance to the search term(styles). When no search query is specified, this sort key is not
    * deterministic and should not be used.
    */
   Relevance = 'RELEVANCE',
@@ -208,7 +208,7 @@ export type AttributeInput = {
 /** Automatic discount applications capture the intentions of a discount that was automatically applied. */
 export type AutomaticDiscountApplication = DiscountApplication & {
   __typename?: 'AutomaticDiscountApplication'
-  /** The method by which the discount's value is allocated to its entitled items. */
+  /** The method by which the discount'styles value is allocated to its entitled items. */
   allocationMethod: DiscountApplicationAllocationMethod
   /** Which lines of targetType that the discount is allocated over. */
   targetSelection: DiscountApplicationTargetSelection
@@ -238,7 +238,7 @@ export type Blog = Node & {
   __typename?: 'Blog'
   /** Find an article by its handle. */
   articleByHandle?: Maybe<Article>
-  /** List of the blog's articles. */
+  /** List of the blog'styles articles. */
   articles: ArticleConnection
   /** The authors who have contributed to the blog. */
   authors: Array<ArticleAuthor>
@@ -246,9 +246,9 @@ export type Blog = Node & {
   handle: Scalars['String']
   /** Globally unique identifier. */
   id: Scalars['ID']
-  /** The blog's SEO information. */
+  /** The blog'styles SEO information. */
   seo?: Maybe<Seo>
-  /** The blogs’s title. */
+  /** The blogs’styles title. */
   title: Scalars['String']
   /** The url pointing to the blog accessible from the web. */
   url: Scalars['URL']
@@ -298,7 +298,7 @@ export enum BlogSortKeys {
   Id = 'ID',
   /**
    * During a search (i.e. when the `query` parameter has been specified on the connection) this sorts the
-   * results by relevance to the search term(s). When no search query is specified, this sort key is not
+   * results by relevance to the search term(styles). When no search query is specified, this sort key is not
    * deterministic and should not be used.
    */
   Relevance = 'RELEVANCE',
@@ -431,7 +431,7 @@ export type CheckoutLineItemsArgs = {
   reverse?: Maybe<Scalars['Boolean']>
 }
 
-/** Specifies the fields required to update a checkout's attributes. */
+/** Specifies the fields required to update a checkout'styles attributes. */
 export type CheckoutAttributesUpdateInput = {
   /** The text of an optional note that a shop owner can attach to the checkout. */
   note?: Maybe<Scalars['String']>
@@ -459,7 +459,7 @@ export type CheckoutAttributesUpdatePayload = {
   userErrors: Array<UserError>
 }
 
-/** Specifies the fields required to update a checkout's attributes. */
+/** Specifies the fields required to update a checkout'styles attributes. */
 export type CheckoutAttributesUpdateV2Input = {
   /** The text of an optional note that a shop owner can attach to the checkout. */
   note?: Maybe<Scalars['String']>
@@ -600,9 +600,9 @@ export type CheckoutCreateInput = {
    */
   allowPartialAddresses?: Maybe<Scalars['Boolean']>
   /**
-   * The three-letter currency code of one of the shop's enabled presentment currencies.
+   * The three-letter currency code of one of the shop'styles enabled presentment currencies.
    * Including this field creates a checkout in the specified currency. By default, new
-   * checkouts are created in the shop's primary currency.
+   * checkouts are created in the shop'styles primary currency.
    */
   presentmentCurrencyCode?: Maybe<CurrencyCode>
 }
@@ -893,7 +893,7 @@ export type CheckoutLineItem = Node & {
   id: Scalars['ID']
   /** The quantity of the line item. */
   quantity: Scalars['Int']
-  /** Title of the line item. Defaults to the product's title. */
+  /** Title of the line item. Defaults to the product'styles title. */
   title: Scalars['String']
   /** Unit price of the line item. */
   unitPrice?: Maybe<MoneyV2>
@@ -1063,7 +1063,7 @@ export type Collection = Node & {
   image?: Maybe<Image>
   /** List of products in the collection. */
   products: ProductConnection
-  /** The collection’s name. Limit of 255 characters. */
+  /** The collection’styles name. Limit of 255 characters. */
   title: Scalars['String']
   /** The date and time when the collection was last modified. */
   updatedAt: Scalars['DateTime']
@@ -1120,7 +1120,7 @@ export enum CollectionSortKeys {
   Id = 'ID',
   /**
    * During a search (i.e. when the `query` parameter has been specified on the connection) this sorts the
-   * results by relevance to the search term(s). When no search query is specified, this sort key is not
+   * results by relevance to the search term(styles). When no search query is specified, this sort key is not
    * deterministic and should not be used.
    */
   Relevance = 'RELEVANCE',
@@ -1129,7 +1129,7 @@ export enum CollectionSortKeys {
 /** A comment on an article. */
 export type Comment = Node & {
   __typename?: 'Comment'
-  /** The comment’s author. */
+  /** The comment’styles author. */
   author: CommentAuthor
   /** Stripped content of the comment, single line with HTML tags removed. */
   content: Scalars['String']
@@ -1147,9 +1147,9 @@ export type CommentContentArgs = {
 /** The author of a comment. */
 export type CommentAuthor = {
   __typename?: 'CommentAuthor'
-  /** The author's email. */
+  /** The author'styles email. */
   email: Scalars['String']
-  /** The author’s name. */
+  /** The author’styles name. */
   name: Scalars['String']
 }
 
@@ -1672,7 +1672,7 @@ export type CreditCard = {
   expiryMonth?: Maybe<Scalars['Int']>
   /** The expiry year of the credit card. */
   expiryYear?: Maybe<Scalars['Int']>
-  /** The credit card's BIN number. */
+  /** The credit card'styles BIN number. */
   firstDigits?: Maybe<Scalars['String']>
   /** The first name of the card holder. */
   firstName?: Maybe<Scalars['String']>
@@ -1695,7 +1695,7 @@ export type CreditCardPaymentInput = {
   idempotencyKey: Scalars['String']
   /** The billing address for the payment. */
   billingAddress: MailingAddressInput
-  /** The ID returned by Shopify's Card Vault. */
+  /** The ID returned by Shopify'styles Card Vault. */
   vaultId: Scalars['String']
   /** Executes the payment in test mode if possible. Defaults to `false`. */
   test?: Maybe<Scalars['Boolean']>
@@ -1712,7 +1712,7 @@ export type CreditCardPaymentInputV2 = {
   idempotencyKey: Scalars['String']
   /** The billing address for the payment. */
   billingAddress: MailingAddressInput
-  /** The ID returned by Shopify's Card Vault. */
+  /** The ID returned by Shopify'styles Card Vault. */
   vaultId: Scalars['String']
   /** Executes the payment in test mode if possible. Defaults to `false`. */
   test?: Maybe<Scalars['Boolean']>
@@ -2061,23 +2061,23 @@ export type Customer = {
   addresses: MailingAddressConnection
   /** The date and time when the customer was created. */
   createdAt: Scalars['DateTime']
-  /** The customer’s default address. */
+  /** The customer’styles default address. */
   defaultAddress?: Maybe<MailingAddress>
-  /** The customer’s name, email or phone number. */
+  /** The customer’styles name, email or phone number. */
   displayName: Scalars['String']
-  /** The customer’s email address. */
+  /** The customer’styles email address. */
   email?: Maybe<Scalars['String']>
-  /** The customer’s first name. */
+  /** The customer’styles first name. */
   firstName?: Maybe<Scalars['String']>
   /** A unique identifier for the customer. */
   id: Scalars['ID']
-  /** The customer's most recently updated, incomplete checkout. */
+  /** The customer'styles most recently updated, incomplete checkout. */
   lastIncompleteCheckout?: Maybe<Checkout>
-  /** The customer’s last name. */
+  /** The customer’styles last name. */
   lastName?: Maybe<Scalars['String']>
   /** The orders associated with the customer. */
   orders: OrderConnection
-  /** The customer’s phone number. */
+  /** The customer’styles phone number. */
   phone?: Maybe<Scalars['String']>
   /**
    * A comma separated list of tags that have been added to the customer.
@@ -2111,7 +2111,7 @@ export type CustomerOrdersArgs = {
 /** A CustomerAccessToken represents the unique token required to make modifications to the customer object. */
 export type CustomerAccessToken = {
   __typename?: 'CustomerAccessToken'
-  /** The customer’s access token. */
+  /** The customer’styles access token. */
   accessToken: Scalars['String']
   /** The date and time when the customer access token expires. */
   expiresAt: Scalars['DateTime']
@@ -2234,7 +2234,7 @@ export type CustomerAddressDeletePayload = {
 /** Return type for `customerAddressUpdate` mutation. */
 export type CustomerAddressUpdatePayload = {
   __typename?: 'CustomerAddressUpdatePayload'
-  /** The customer’s updated mailing address. */
+  /** The customer’styles updated mailing address. */
   customerAddress?: Maybe<MailingAddress>
   /** List of errors that occurred executing the mutation. */
   customerUserErrors: Array<CustomerUserError>
@@ -2247,11 +2247,11 @@ export type CustomerAddressUpdatePayload = {
 
 /** Specifies the fields required to create a new customer. */
 export type CustomerCreateInput = {
-  /** The customer’s first name. */
+  /** The customer’styles first name. */
   firstName?: Maybe<Scalars['String']>
-  /** The customer’s last name. */
+  /** The customer’styles last name. */
   lastName?: Maybe<Scalars['String']>
-  /** The customer’s email. */
+  /** The customer’styles email. */
   email: Scalars['String']
   /**
    * A unique phone number for the customer.
@@ -2355,9 +2355,9 @@ export type CustomerResetByUrlPayload = {
   userErrors: Array<UserError>
 }
 
-/** Specifies the fields required to reset a customer’s password. */
+/** Specifies the fields required to reset a customer’styles password. */
 export type CustomerResetInput = {
-  /** The reset token required to reset the customer’s password. */
+  /** The reset token required to reset the customer’styles password. */
   resetToken: Scalars['String']
   /** New password that will be set as part of the reset password process. */
   password: Scalars['String']
@@ -2381,11 +2381,11 @@ export type CustomerResetPayload = {
 
 /** Specifies the fields required to update the Customer information. */
 export type CustomerUpdateInput = {
-  /** The customer’s first name. */
+  /** The customer’styles first name. */
   firstName?: Maybe<Scalars['String']>
-  /** The customer’s last name. */
+  /** The customer’styles last name. */
   lastName?: Maybe<Scalars['String']>
-  /** The customer’s email. */
+  /** The customer’styles email. */
   email?: Maybe<Scalars['String']>
   /**
    * A unique phone number for the customer.
@@ -2405,7 +2405,7 @@ export type CustomerUpdatePayload = {
   /** The updated customer object. */
   customer?: Maybe<Customer>
   /**
-   * The newly created customer access token. If the customer's password is updated, all previous access tokens
+   * The newly created customer access token. If the customer'styles password is updated, all previous access tokens
    * (including the one used to perform this mutation) become invalid, and a new token is generated.
    */
   customerAccessToken?: Maybe<CustomerAccessToken>
@@ -2455,7 +2455,7 @@ export type DiscountAllocation = {
  * the time of application.
  */
 export type DiscountApplication = {
-  /** The method by which the discount's value is allocated to its entitled items. */
+  /** The method by which the discount'styles value is allocated to its entitled items. */
   allocationMethod: DiscountApplicationAllocationMethod
   /** Which lines of targetType that the discount is allocated over. */
   targetSelection: DiscountApplicationTargetSelection
@@ -2465,7 +2465,7 @@ export type DiscountApplication = {
   value: PricingValue
 }
 
-/** The method by which the discount's value is allocated onto its entitled lines. */
+/** The method by which the discount'styles value is allocated onto its entitled lines. */
 export enum DiscountApplicationAllocationMethod {
   /** The value is spread across all entitled lines. */
   Across = 'ACROSS',
@@ -2495,7 +2495,7 @@ export type DiscountApplicationEdge = {
 
 /**
  * Which lines on the order that the discount is allocated over, of the type
- * defined by the Discount Application's target_type.
+ * defined by the Discount Application'styles target_type.
  */
 export enum DiscountApplicationTargetSelection {
   /** The discount is allocated onto all the lines. */
@@ -2520,7 +2520,7 @@ export enum DiscountApplicationTargetType {
  */
 export type DiscountCodeApplication = DiscountApplication & {
   __typename?: 'DiscountCodeApplication'
-  /** The method by which the discount's value is allocated to its entitled items. */
+  /** The method by which the discount'styles value is allocated to its entitled items. */
   allocationMethod: DiscountApplicationAllocationMethod
   /** Specifies whether the discount code was applied successfully. */
   applicable: Scalars['Boolean']
@@ -2572,7 +2572,7 @@ export type ExternalVideo = Node &
 /** Represents a single fulfillment in an order. */
 export type Fulfillment = {
   __typename?: 'Fulfillment'
-  /** List of the fulfillment's line items. */
+  /** List of the fulfillment'styles line items. */
   fulfillmentLineItems: FulfillmentLineItemConnection
   /** The name of the tracking company. */
   trackingCompany?: Maybe<Scalars['String']>
@@ -2600,7 +2600,7 @@ export type FulfillmentTrackingInfoArgs = {
 /** Represents a single line item in a fulfillment. There is at most one fulfillment line item for each order line item. */
 export type FulfillmentLineItem = {
   __typename?: 'FulfillmentLineItem'
-  /** The associated order's line item. */
+  /** The associated order'styles line item. */
   lineItem: OrderLineItem
   /** The amount fulfilled in this fulfillment. */
   quantity: Scalars['Int']
@@ -2775,7 +2775,7 @@ export type MailingAddress = Node & {
   address2?: Maybe<Scalars['String']>
   /** The name of the city, district, village, or town. */
   city?: Maybe<Scalars['String']>
-  /** The name of the customer's company or organization. */
+  /** The name of the customer'styles company or organization. */
   company?: Maybe<Scalars['String']>
   /** The name of the country. */
   country?: Maybe<Scalars['String']>
@@ -2858,7 +2858,7 @@ export type MailingAddressInput = {
   address2?: Maybe<Scalars['String']>
   /** The name of the city, district, village, or town. */
   city?: Maybe<Scalars['String']>
-  /** The name of the customer's company or organization. */
+  /** The name of the customer'styles company or organization. */
   company?: Maybe<Scalars['String']>
   /** The name of the country. */
   country?: Maybe<Scalars['String']>
@@ -2881,7 +2881,7 @@ export type MailingAddressInput = {
 /** Manual discount applications capture the intentions of a discount that was manually created. */
 export type ManualDiscountApplication = DiscountApplication & {
   __typename?: 'ManualDiscountApplication'
-  /** The method by which the discount's value is allocated to its entitled items. */
+  /** The method by which the discount'styles value is allocated to its entitled items. */
   allocationMethod: DiscountApplicationAllocationMethod
   /** The description of the application. */
   description?: Maybe<Scalars['String']>
@@ -3048,7 +3048,7 @@ export type MoneyInput = {
 /**
  * A monetary value with currency.
  *
- * To format currencies, combine this type's amount and currencyCode fields with your client's locale.
+ * To format currencies, combine this type'styles amount and currencyCode fields with your client'styles locale.
  *
  * For example, in JavaScript you could use Intl.NumberFormat:
  *
@@ -3094,7 +3094,7 @@ export type MoneyV2Edge = {
   node: MoneyV2
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type Mutation = {
   __typename?: 'Mutation'
   /**
@@ -3107,11 +3107,11 @@ export type Mutation = {
   /** Completes a checkout without providing payment information. You can use this mutation for free items or items whose purchase price is covered by a gift card. */
   checkoutCompleteFree?: Maybe<CheckoutCompleteFreePayload>
   /**
-   * Completes a checkout using a credit card token from Shopify's Vault.
+   * Completes a checkout using a credit card token from Shopify'styles Vault.
    * @deprecated Use `checkoutCompleteWithCreditCardV2` instead
    */
   checkoutCompleteWithCreditCard?: Maybe<CheckoutCompleteWithCreditCardPayload>
-  /** Completes a checkout using a credit card token from Shopify's card vault. Before you can complete checkouts using CheckoutCompleteWithCreditCardV2, you need to  [_request payment processing_](https://help.shopify.com/api/guides/sales-channel-sdk/getting-started#request-payment-processing). */
+  /** Completes a checkout using a credit card token from Shopify'styles card vault. Before you can complete checkouts using CheckoutCompleteWithCreditCardV2, you need to  [_request payment processing_](https://help.shopify.com/api/guides/sales-channel-sdk/getting-started#request-payment-processing). */
   checkoutCompleteWithCreditCardV2?: Maybe<
     CheckoutCompleteWithCreditCardV2Payload
   >
@@ -3206,7 +3206,7 @@ export type Mutation = {
   /**
    * Creates a customer access token using a multipass token instead of email and password.
    * A customer record is created if customer does not exist. If a customer record already
-   * exists but the record is disabled, then it's enabled.
+   * exists but the record is disabled, then it'styles enabled.
    */
   customerAccessTokenCreateWithMultipass?: Maybe<
     CustomerAccessTokenCreateWithMultipassPayload
@@ -3236,263 +3236,263 @@ export type Mutation = {
   customerDefaultAddressUpdate?: Maybe<CustomerDefaultAddressUpdatePayload>
   /** Sends a reset password email to the customer, as the first step in the reset password process. */
   customerRecover?: Maybe<CustomerRecoverPayload>
-  /** Resets a customer’s password with a token received from `CustomerRecover`. */
+  /** Resets a customer’styles password with a token received from `CustomerRecover`. */
   customerReset?: Maybe<CustomerResetPayload>
-  /** Resets a customer’s password with the reset password url received from `CustomerRecover`. */
+  /** Resets a customer’styles password with the reset password url received from `CustomerRecover`. */
   customerResetByUrl?: Maybe<CustomerResetByUrlPayload>
   /** Updates an existing customer. */
   customerUpdate?: Maybe<CustomerUpdatePayload>
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutAttributesUpdateArgs = {
   checkoutId: Scalars['ID']
   input: CheckoutAttributesUpdateInput
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutAttributesUpdateV2Args = {
   checkoutId: Scalars['ID']
   input: CheckoutAttributesUpdateV2Input
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutCompleteFreeArgs = {
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutCompleteWithCreditCardArgs = {
   checkoutId: Scalars['ID']
   payment: CreditCardPaymentInput
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutCompleteWithCreditCardV2Args = {
   checkoutId: Scalars['ID']
   payment: CreditCardPaymentInputV2
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutCompleteWithTokenizedPaymentArgs = {
   checkoutId: Scalars['ID']
   payment: TokenizedPaymentInput
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutCompleteWithTokenizedPaymentV2Args = {
   checkoutId: Scalars['ID']
   payment: TokenizedPaymentInputV2
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutCompleteWithTokenizedPaymentV3Args = {
   checkoutId: Scalars['ID']
   payment: TokenizedPaymentInputV3
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutCreateArgs = {
   input: CheckoutCreateInput
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutCustomerAssociateArgs = {
   checkoutId: Scalars['ID']
   customerAccessToken: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutCustomerAssociateV2Args = {
   checkoutId: Scalars['ID']
   customerAccessToken: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutCustomerDisassociateArgs = {
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutCustomerDisassociateV2Args = {
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutDiscountCodeApplyArgs = {
   discountCode: Scalars['String']
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutDiscountCodeApplyV2Args = {
   discountCode: Scalars['String']
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutDiscountCodeRemoveArgs = {
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutEmailUpdateArgs = {
   checkoutId: Scalars['ID']
   email: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutEmailUpdateV2Args = {
   checkoutId: Scalars['ID']
   email: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutGiftCardApplyArgs = {
   giftCardCode: Scalars['String']
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutGiftCardRemoveArgs = {
   appliedGiftCardId: Scalars['ID']
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutGiftCardRemoveV2Args = {
   appliedGiftCardId: Scalars['ID']
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutGiftCardsAppendArgs = {
   giftCardCodes: Array<Scalars['String']>
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutLineItemsAddArgs = {
   lineItems: Array<CheckoutLineItemInput>
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutLineItemsRemoveArgs = {
   checkoutId: Scalars['ID']
   lineItemIds: Array<Scalars['ID']>
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutLineItemsReplaceArgs = {
   lineItems: Array<CheckoutLineItemInput>
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutLineItemsUpdateArgs = {
   checkoutId: Scalars['ID']
   lineItems: Array<CheckoutLineItemUpdateInput>
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutShippingAddressUpdateArgs = {
   shippingAddress: MailingAddressInput
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutShippingAddressUpdateV2Args = {
   shippingAddress: MailingAddressInput
   checkoutId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCheckoutShippingLineUpdateArgs = {
   checkoutId: Scalars['ID']
   shippingRateHandle: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerAccessTokenCreateArgs = {
   input: CustomerAccessTokenCreateInput
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerAccessTokenCreateWithMultipassArgs = {
   multipassToken: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerAccessTokenDeleteArgs = {
   customerAccessToken: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerAccessTokenRenewArgs = {
   customerAccessToken: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerActivateArgs = {
   id: Scalars['ID']
   input: CustomerActivateInput
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerActivateByUrlArgs = {
   activationUrl: Scalars['URL']
   password: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerAddressCreateArgs = {
   customerAccessToken: Scalars['String']
   address: MailingAddressInput
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerAddressDeleteArgs = {
   id: Scalars['ID']
   customerAccessToken: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerAddressUpdateArgs = {
   customerAccessToken: Scalars['String']
   id: Scalars['ID']
   address: MailingAddressInput
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerCreateArgs = {
   input: CustomerCreateInput
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerDefaultAddressUpdateArgs = {
   customerAccessToken: Scalars['String']
   addressId: Scalars['ID']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerRecoverArgs = {
   email: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerResetArgs = {
   id: Scalars['ID']
   input: CustomerResetInput
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerResetByUrlArgs = {
   resetUrl: Scalars['URL']
   password: Scalars['String']
 }
 
-/** The schema’s entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
+/** The schema’styles entry-point for mutations. This acts as the public, top-level API from which all mutation queries must start. */
 export type MutationCustomerUpdateArgs = {
   customerAccessToken: Scalars['String']
   customer: CustomerUpdateInput
@@ -3504,10 +3504,10 @@ export type Node = {
   id: Scalars['ID']
 }
 
-/** An order is a customer’s completed request to purchase one or more products from a shop. An order is created when a customer completes the checkout process, during which time they provides an email address, billing address and payment information. */
+/** An order is a customer’styles completed request to purchase one or more products from a shop. An order is created when a customer completes the checkout process, during which time they provides an email address, billing address and payment information. */
 export type Order = Node & {
   __typename?: 'Order'
-  /** The reason for the order's cancellation. Returns `null` if the order wasn't canceled. */
+  /** The reason for the order'styles cancellation. Returns `null` if the order wasn't canceled. */
   cancelReason?: Maybe<OrderCancelReason>
   /** The date and time when the order was canceled. Returns null if the order wasn't canceled. */
   canceledAt?: Maybe<Scalars['DateTime']>
@@ -3527,7 +3527,7 @@ export type Order = Node & {
   discountApplications: DiscountApplicationConnection
   /** Whether the order has had any edits applied or not. */
   edited: Scalars['Boolean']
-  /** The customer's email address. */
+  /** The customer'styles email address. */
   email?: Maybe<Scalars['String']>
   /** The financial status of the order. */
   financialStatus?: Maybe<OrderFinancialStatus>
@@ -3535,7 +3535,7 @@ export type Order = Node & {
   fulfillmentStatus: OrderFulfillmentStatus
   /** Globally unique identifier. */
   id: Scalars['ID']
-  /** List of the order’s line items. */
+  /** List of the order’styles line items. */
   lineItems: OrderLineItemConnection
   /**
    * Unique identifier for the order that appears on the order.
@@ -3546,7 +3546,7 @@ export type Order = Node & {
   orderNumber: Scalars['Int']
   /** The total price of the order before any applied edits. */
   originalTotalPrice: MoneyV2
-  /** The customer's phone number for receiving SMS notifications. */
+  /** The customer'styles phone number for receiving SMS notifications. */
   phone?: Maybe<Scalars['String']>
   /**
    * The date and time when the order was imported.
@@ -3558,7 +3558,7 @@ export type Order = Node & {
   shippingAddress?: Maybe<MailingAddress>
   /** The discounts that have been allocated onto the shipping line by discount applications. */
   shippingDiscountAllocations: Array<DiscountAllocation>
-  /** The unique URL for the order's status page. */
+  /** The unique URL for the order'styles status page. */
   statusUrl: Scalars['URL']
   /**
    * Price of the order before shipping and taxes.
@@ -3567,7 +3567,7 @@ export type Order = Node & {
   subtotalPrice?: Maybe<Scalars['Money']>
   /** Price of the order before duties, shipping and taxes. */
   subtotalPriceV2?: Maybe<MoneyV2>
-  /** List of the order’s successful fulfillments. */
+  /** List of the order’styles successful fulfillments. */
   successfulFulfillments?: Maybe<Array<Fulfillment>>
   /**
    * The sum of all the prices of all the items in the order, taxes and discounts included (must be positive).
@@ -3599,7 +3599,7 @@ export type Order = Node & {
   totalTaxV2?: Maybe<MoneyV2>
 }
 
-/** An order is a customer’s completed request to purchase one or more products from a shop. An order is created when a customer completes the checkout process, during which time they provides an email address, billing address and payment information. */
+/** An order is a customer’styles completed request to purchase one or more products from a shop. An order is created when a customer completes the checkout process, during which time they provides an email address, billing address and payment information. */
 export type OrderDiscountApplicationsArgs = {
   first?: Maybe<Scalars['Int']>
   after?: Maybe<Scalars['String']>
@@ -3608,7 +3608,7 @@ export type OrderDiscountApplicationsArgs = {
   reverse?: Maybe<Scalars['Boolean']>
 }
 
-/** An order is a customer’s completed request to purchase one or more products from a shop. An order is created when a customer completes the checkout process, during which time they provides an email address, billing address and payment information. */
+/** An order is a customer’styles completed request to purchase one or more products from a shop. An order is created when a customer completes the checkout process, during which time they provides an email address, billing address and payment information. */
 export type OrderLineItemsArgs = {
   first?: Maybe<Scalars['Int']>
   after?: Maybe<Scalars['String']>
@@ -3617,12 +3617,12 @@ export type OrderLineItemsArgs = {
   reverse?: Maybe<Scalars['Boolean']>
 }
 
-/** An order is a customer’s completed request to purchase one or more products from a shop. An order is created when a customer completes the checkout process, during which time they provides an email address, billing address and payment information. */
+/** An order is a customer’styles completed request to purchase one or more products from a shop. An order is created when a customer completes the checkout process, during which time they provides an email address, billing address and payment information. */
 export type OrderSuccessfulFulfillmentsArgs = {
   first?: Maybe<Scalars['Int']>
 }
 
-/** Represents the reason for the order's cancellation. */
+/** Represents the reason for the order'styles cancellation. */
 export enum OrderCancelReason {
   /** The customer wanted to cancel the order. */
   Customer = 'CUSTOMER',
@@ -3654,7 +3654,7 @@ export type OrderEdge = {
   node: Order
 }
 
-/** Represents the order's current financial status. */
+/** Represents the order'styles current financial status. */
 export enum OrderFinancialStatus {
   /** Displayed as **Pending**. */
   Pending = 'PENDING',
@@ -3672,7 +3672,7 @@ export enum OrderFinancialStatus {
   Refunded = 'REFUNDED',
 }
 
-/** Represents the order's current fulfillment status. */
+/** Represents the order'styles current fulfillment status. */
 export enum OrderFulfillmentStatus {
   /** Displayed as **Unfulfilled**. */
   Unfulfilled = 'UNFULFILLED',
@@ -3741,7 +3741,7 @@ export enum OrderSortKeys {
   Id = 'ID',
   /**
    * During a search (i.e. when the `query` parameter has been specified on the connection) this sorts the
-   * results by relevance to the search term(s). When no search query is specified, this sort key is not
+   * results by relevance to the search term(styles). When no search query is specified, this sort key is not
    * deterministic and should not be used.
    */
   Relevance = 'RELEVANCE',
@@ -3760,7 +3760,7 @@ export type Page = Node & {
   handle: Scalars['String']
   /** Globally unique identifier. */
   id: Scalars['ID']
-  /** The page's SEO information. */
+  /** The page'styles SEO information. */
   seo?: Maybe<Seo>
   /** The title of the page. */
   title: Scalars['String']
@@ -3807,7 +3807,7 @@ export enum PageSortKeys {
   Id = 'ID',
   /**
    * During a search (i.e. when the `query` parameter has been specified on the connection) this sorts the
-   * results by relevance to the search term(s). When no search query is specified, this sort key is not
+   * results by relevance to the search term(styles). When no search query is specified, this sort key is not
    * deterministic and should not be used.
    */
   Relevance = 'RELEVANCE',
@@ -3858,11 +3858,11 @@ export type PaymentSettings = {
   cardVaultUrl: Scalars['URL']
   /** The country where the shop is located. */
   countryCode: CountryCode
-  /** The three-letter code for the shop's primary currency. */
+  /** The three-letter code for the shop'styles primary currency. */
   currencyCode: CurrencyCode
   /** A list of enabled currencies (ISO 4217 format) that the shop accepts. Merchants can enable currencies from their Shopify Payments settings in the Shopify admin. */
   enabledPresentmentCurrencies: Array<CurrencyCode>
-  /** The shop’s Shopify Payments account id. */
+  /** The shop’styles Shopify Payments account id. */
   shopifyPaymentsAccountId?: Maybe<Scalars['String']>
   /** List of the digital wallets which the shop supports. */
   supportedDigitalWallets: Array<DigitalWallet>
@@ -3939,33 +3939,33 @@ export type Product = Node &
     productType: Scalars['String']
     /** The date and time when the product was published to the channel. */
     publishedAt: Scalars['DateTime']
-    /** The product's SEO information. */
+    /** The product'styles SEO information. */
     seo: Seo
     /**
      * A comma separated list of tags that have been added to the product.
      * Additional access scope required for private apps: unauthenticated_read_product_tags.
      */
     tags: Array<Scalars['String']>
-    /** The product’s title. */
+    /** The product’styles title. */
     title: Scalars['String']
     /** The total quantity of inventory in stock for this Product. */
     totalInventory?: Maybe<Scalars['Int']>
     /**
      * The date and time when the product was last modified.
-     * A product's `updatedAt` value can change for different reasons. For example, if an order
+     * A product'styles `updatedAt` value can change for different reasons. For example, if an order
      * is placed for a product that has inventory tracking set up, then the inventory adjustment
      * is counted as an update.
      */
     updatedAt: Scalars['DateTime']
     /**
-     * Find a product’s variant based on its selected options.
-     * This is useful for converting a user’s selection of product options into a single matching variant.
+     * Find a product’styles variant based on its selected options.
+     * This is useful for converting a user’styles selection of product options into a single matching variant.
      * If there is not a variant for the selected options, `null` will be returned.
      */
     variantBySelectedOptions?: Maybe<ProductVariant>
-    /** List of the product’s variants. */
+    /** List of the product’styles variants. */
     variants: ProductVariantConnection
-    /** The product’s vendor name. */
+    /** The product’styles vendor name. */
     vendor: Scalars['String']
   }
 
@@ -4101,7 +4101,7 @@ export enum ProductCollectionSortKeys {
   CollectionDefault = 'COLLECTION_DEFAULT',
   /**
    * During a search (i.e. when the `query` parameter has been specified on the connection) this sorts the
-   * results by relevance to the search term(s). When no search query is specified, this sort key is not
+   * results by relevance to the search term(styles). When no search query is specified, this sort key is not
    * deterministic and should not be used.
    */
   Relevance = 'RELEVANCE',
@@ -4135,7 +4135,7 @@ export enum ProductImageSortKeys {
   Id = 'ID',
   /**
    * During a search (i.e. when the `query` parameter has been specified on the connection) this sorts the
-   * results by relevance to the search term(s). When no search query is specified, this sort key is not
+   * results by relevance to the search term(styles). When no search query is specified, this sort key is not
    * deterministic and should not be used.
    */
   Relevance = 'RELEVANCE',
@@ -4149,7 +4149,7 @@ export enum ProductMediaSortKeys {
   Id = 'ID',
   /**
    * During a search (i.e. when the `query` parameter has been specified on the connection) this sorts the
-   * results by relevance to the search term(s). When no search query is specified, this sort key is not
+   * results by relevance to the search term(styles). When no search query is specified, this sort key is not
    * deterministic and should not be used.
    */
   Relevance = 'RELEVANCE',
@@ -4164,7 +4164,7 @@ export type ProductOption = Node & {
   __typename?: 'ProductOption'
   /** Globally unique identifier. */
   id: Scalars['ID']
-  /** The product option’s name. */
+  /** The product option’styles name. */
   name: Scalars['String']
   /** The corresponding value to the product option name. */
   values: Array<Scalars['String']>
@@ -4173,9 +4173,9 @@ export type ProductOption = Node & {
 /** The price range of the product. */
 export type ProductPriceRange = {
   __typename?: 'ProductPriceRange'
-  /** The highest variant's price. */
+  /** The highest variant'styles price. */
   maxVariantPrice: MoneyV2
-  /** The lowest variant's price. */
+  /** The lowest variant'styles price. */
   minVariantPrice: MoneyV2
 }
 
@@ -4217,7 +4217,7 @@ export enum ProductSortKeys {
   Id = 'ID',
   /**
    * During a search (i.e. when the `query` parameter has been specified on the connection) this sorts the
-   * results by relevance to the search term(s). When no search query is specified, this sort key is not
+   * results by relevance to the search term(styles). When no search query is specified, this sort key is not
    * deterministic and should not be used.
    */
   Relevance = 'RELEVANCE',
@@ -4256,11 +4256,11 @@ export type ProductVariant = Node &
     /** List of unit prices in the presentment currencies for this shop. */
     presentmentUnitPrices: MoneyV2Connection
     /**
-     * The product variant’s price.
+     * The product variant’styles price.
      * @deprecated Use `priceV2` instead
      */
     price: Scalars['Money']
-    /** The product variant’s price. */
+    /** The product variant’styles price. */
     priceV2: MoneyV2
     /** The product object that the product variant belongs to. */
     product: Product
@@ -4272,9 +4272,9 @@ export type ProductVariant = Node &
     selectedOptions: Array<SelectedOption>
     /** The SKU (stock keeping unit) associated with the variant. */
     sku?: Maybe<Scalars['String']>
-    /** The product variant’s title. */
+    /** The product variant’styles title. */
     title: Scalars['String']
-    /** The unit price value for the variant based on the variant's measurement. */
+    /** The unit price value for the variant based on the variant'styles measurement. */
     unitPrice?: Maybe<MoneyV2>
     /** The unit price measurement for the variant. */
     unitPriceMeasurement?: Maybe<UnitPriceMeasurement>
@@ -4385,24 +4385,24 @@ export enum ProductVariantSortKeys {
   Id = 'ID',
   /**
    * During a search (i.e. when the `query` parameter has been specified on the connection) this sorts the
-   * results by relevance to the search term(s). When no search query is specified, this sort key is not
+   * results by relevance to the search term(styles). When no search query is specified, this sort key is not
    * deterministic and should not be used.
    */
   Relevance = 'RELEVANCE',
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRoot = {
   __typename?: 'QueryRoot'
-  /** List of the shop's articles. */
+  /** List of the shop'styles articles. */
   articles: ArticleConnection
   /** Find a blog by its handle. */
   blogByHandle?: Maybe<Blog>
-  /** List of the shop's blogs. */
+  /** List of the shop'styles blogs. */
   blogs: BlogConnection
   /** Find a collection by its handle. */
   collectionByHandle?: Maybe<Collection>
-  /** List of the shop’s collections. */
+  /** List of the shop’styles collections. */
   collections: CollectionConnection
   /** Find a customer by its access token. */
   customer?: Maybe<Customer>
@@ -4412,7 +4412,7 @@ export type QueryRoot = {
   nodes: Array<Maybe<Node>>
   /** Find a page by its handle. */
   pageByHandle?: Maybe<Page>
-  /** List of the shop's pages. */
+  /** List of the shop'styles pages. */
   pages: PageConnection
   /** Find a product by its handle. */
   productByHandle?: Maybe<Product>
@@ -4427,9 +4427,9 @@ export type QueryRoot = {
    * Additional access scope required: unauthenticated_read_product_tags.
    */
   productTags: StringConnection
-  /** List of product types for the shop's products that are published to your app. */
+  /** List of product types for the shop'styles products that are published to your app. */
   productTypes: StringConnection
-  /** List of the shop’s products. */
+  /** List of the shop’styles products. */
   products: ProductConnection
   /** The list of public Storefront API versions, including supported, release candidate and unstable versions. */
   publicApiVersions: Array<ApiVersion>
@@ -4437,7 +4437,7 @@ export type QueryRoot = {
   shop: Shop
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootArticlesArgs = {
   first?: Maybe<Scalars['Int']>
   after?: Maybe<Scalars['String']>
@@ -4448,12 +4448,12 @@ export type QueryRootArticlesArgs = {
   query?: Maybe<Scalars['String']>
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootBlogByHandleArgs = {
   handle: Scalars['String']
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootBlogsArgs = {
   first?: Maybe<Scalars['Int']>
   after?: Maybe<Scalars['String']>
@@ -4464,12 +4464,12 @@ export type QueryRootBlogsArgs = {
   query?: Maybe<Scalars['String']>
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootCollectionByHandleArgs = {
   handle: Scalars['String']
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootCollectionsArgs = {
   first?: Maybe<Scalars['Int']>
   after?: Maybe<Scalars['String']>
@@ -4480,27 +4480,27 @@ export type QueryRootCollectionsArgs = {
   query?: Maybe<Scalars['String']>
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootCustomerArgs = {
   customerAccessToken: Scalars['String']
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootNodeArgs = {
   id: Scalars['ID']
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootNodesArgs = {
   ids: Array<Scalars['ID']>
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootPageByHandleArgs = {
   handle: Scalars['String']
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootPagesArgs = {
   first?: Maybe<Scalars['Int']>
   after?: Maybe<Scalars['String']>
@@ -4511,27 +4511,27 @@ export type QueryRootPagesArgs = {
   query?: Maybe<Scalars['String']>
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootProductByHandleArgs = {
   handle: Scalars['String']
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootProductRecommendationsArgs = {
   productId: Scalars['ID']
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootProductTagsArgs = {
   first: Scalars['Int']
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootProductTypesArgs = {
   first: Scalars['Int']
 }
 
-/** The schema’s entry-point for queries. This acts as the public, top-level API from which all queries must start. */
+/** The schema’styles entry-point for queries. This acts as the public, top-level API from which all queries must start. */
 export type QueryRootProductsArgs = {
   first?: Maybe<Scalars['Int']>
   after?: Maybe<Scalars['String']>
@@ -4557,7 +4557,7 @@ export type Seo = {
  */
 export type ScriptDiscountApplication = DiscountApplication & {
   __typename?: 'ScriptDiscountApplication'
-  /** The method by which the discount's value is allocated to its entitled items. */
+  /** The method by which the discount'styles value is allocated to its entitled items. */
   allocationMethod: DiscountApplicationAllocationMethod
   /**
    * The description of the application as defined by the Script.
@@ -4580,17 +4580,17 @@ export type ScriptDiscountApplication = DiscountApplication & {
  */
 export type SelectedOption = {
   __typename?: 'SelectedOption'
-  /** The product option’s name. */
+  /** The product option’styles name. */
   name: Scalars['String']
-  /** The product option’s value. */
+  /** The product option’styles value. */
   value: Scalars['String']
 }
 
 /** Specifies the input fields required for a selected option. */
 export type SelectedOptionInput = {
-  /** The product option’s name. */
+  /** The product option’styles name. */
   name: Scalars['String']
-  /** The product option’s value. */
+  /** The product option’styles value. */
   value: Scalars['String']
 }
 
@@ -4629,7 +4629,7 @@ export type Shop = {
    */
   collectionByHandle?: Maybe<Collection>
   /**
-   * List of the shop’s collections.
+   * List of the shop’styles collections.
    * @deprecated Use `QueryRoot.collections` instead.
    */
   collections: CollectionConnection
@@ -4642,13 +4642,13 @@ export type Shop = {
   description?: Maybe<Scalars['String']>
   /** A string representing the way currency is formatted when the currency isn’t specified. */
   moneyFormat: Scalars['String']
-  /** The shop’s name. */
+  /** The shop’styles name. */
   name: Scalars['String']
   /** Settings related to payments. */
   paymentSettings: PaymentSettings
-  /** The shop’s primary domain. */
+  /** The shop’styles primary domain. */
   primaryDomain: Domain
-  /** The shop’s privacy policy. */
+  /** The shop’styles privacy policy. */
   privacyPolicy?: Maybe<ShopPolicy>
   /**
    * Find a product by its handle.
@@ -4662,27 +4662,27 @@ export type Shop = {
    */
   productTags: StringConnection
   /**
-   * List of the shop’s product types.
+   * List of the shop’styles product types.
    * @deprecated Use `QueryRoot.productTypes` instead.
    */
   productTypes: StringConnection
   /**
-   * List of the shop’s products.
+   * List of the shop’styles products.
    * @deprecated Use `QueryRoot.products` instead.
    */
   products: ProductConnection
-  /** The shop’s refund policy. */
+  /** The shop’styles refund policy. */
   refundPolicy?: Maybe<ShopPolicy>
-  /** The shop’s shipping policy. */
+  /** The shop’styles shipping policy. */
   shippingPolicy?: Maybe<ShopPolicy>
   /** Countries that the shop ships to. */
   shipsToCountries: Array<CountryCode>
   /**
-   * The shop’s Shopify Payments account id.
+   * The shop’styles Shopify Payments account id.
    * @deprecated Use `paymentSettings` instead
    */
   shopifyPaymentsAccountId?: Maybe<Scalars['String']>
-  /** The shop’s terms of service. */
+  /** The shop’styles terms of service. */
   termsOfService?: Maybe<ShopPolicy>
 }
 
@@ -4755,11 +4755,11 @@ export type ShopPolicy = Node & {
   __typename?: 'ShopPolicy'
   /** Policy text, maximum size of 64kb. */
   body: Scalars['String']
-  /** Policy’s handle. */
+  /** Policy’styles handle. */
   handle: Scalars['String']
   /** Globally unique identifier. */
   id: Scalars['ID']
-  /** Policy’s title. */
+  /** Policy’styles title. */
   title: Scalars['String']
   /** Public URL to the policy. */
   url: Scalars['URL']
@@ -4876,7 +4876,7 @@ export enum TransactionKind {
   /** A transfer of the money that was reserved during the authorization stage. */
   Capture = 'CAPTURE',
   /**
-   * An amount reserved against the cardholder's funding source.
+   * An amount reserved against the cardholder'styles funding source.
    * Money does not change hands until the authorization is captured.
    */
   Authorization = 'AUTHORIZATION',

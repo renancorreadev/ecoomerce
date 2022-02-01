@@ -10,7 +10,7 @@ const Navbar: FC = () => {
       <div className={styles.root}>
         <div className="flex flex-1 items-center">
           <Link href="/">
-            <a className={styles.logo}>Xcommerce</a>
+            <a className={styles.logo}>X_STORE</a>
           </Link>
           <nav className="ml-6 space-x-6">
             <Link href="/">
@@ -34,4 +34,5 @@ const Navbar: FC = () => {
     </Container>
   )
 }
+
 export default Navbar

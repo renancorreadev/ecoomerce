@@ -14,14 +14,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "paths": {
       "@common": ["framework/common"],
       "@common/*": ["framework/common/*"],
       "@framework": ["framework/shopify"],
       "@framework/*": ["framework/shopify/*"],
       "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"]
+      "@assets/*": ["assets/*"],
+      "@lib/*": ["lib/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

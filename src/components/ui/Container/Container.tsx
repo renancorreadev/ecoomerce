@@ -1,21 +1,20 @@
-import { ReactNode, FC, ComponentType, HTMLAttributes } from 'react'
+import { ReactNode, FC, ComponentType, HTMLAttributes } from "react";
 
-interface ContainerProps {
+
+interface Props {
   children: ReactNode | ReactNode[]
-  className?: HTMLAttributes<HTMLDivElement>['className']
-  element?: ComponentType<HTMLAttributes<HTMLElement>>
+  el?: ComponentType<HTMLAttributes<HTMLElement>>
 }
 
-const Container: FC<ContainerProps> = ({
-  children,
-  className,
-  element: Component = 'div',
-}) => {
+
+const Container: FC<Props> = ({children, el: Component = "div"}) => {
+
   return (
-    <Component className={className} style={{ maxWidth: '1920px' }}>
+    <Component
+      className="px-6 mx-auto max-w-8xl">
       {children}
     </Component>
   )
 }
 
-export default Container
+export default Container;

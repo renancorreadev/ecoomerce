@@ -1,1 +1,3 @@
-export { default } from './Marquee'
+
+
+export { default } from "./Marquee"

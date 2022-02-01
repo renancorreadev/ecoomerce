@@ -1,15 +1,23 @@
-import { createContext, FC, useContext, useReducer, useMemo } from 'react'
+
+import {
+  createContext,
+  FC,
+  useContext,
+  useReducer,
+  useMemo } from "react"
+
 export interface StateModifiers {
   openSidebar: () => void
   closeSidebar: () => void
 }
+
 export interface StateValues {
   isSidebarOpen: boolean
 }
 
 const stateModifiers = {
   openSidebar: () => {},
-  closeSidebar: () => {},
+  closeSidebar: () => {}
 }
 
 const initialState = { isSidebarOpen: false }
@@ -18,46 +26,46 @@ type State = StateValues & StateModifiers
 
 const UIContext = createContext<State>({
   ...stateModifiers,
-  ...initialState,
+  ...initialState
 })
 
-type Action = { type: 'OPEN_SIDEBAR' | 'CLOSE_SIDEBAR' }
+type Action = { type: "OPEN_SIDEBAR" | "CLOSE_SIDEBAR" }
 
 function uiReducer(state: StateValues, action: Action) {
-  switch (action.type) {
-    case 'OPEN_SIDEBAR': {
+  switch(action.type) {
+    case "OPEN_SIDEBAR": {
       return {
         ...state,
-        isSidebarOpen: true,
+        isSidebarOpen: true
       }
     }
-    case 'CLOSE_SIDEBAR': {
+    case "CLOSE_SIDEBAR": {
       return {
         ...state,
-        isSidebarOpen: false,
+        isSidebarOpen: false
       }
     }
   }
 }
 
-export const UIProvider: FC = ({ children }) => {
+export const UIProvider: FC = ({children}) => {
   const [state, dispatch] = useReducer(uiReducer, initialState)
 
-  const openSidebar = () => dispatch({ type: 'OPEN_SIDEBAR' })
-  const closeSidebar = () => dispatch({ type: 'CLOSE_SIDEBAR' })
+  const openSidebar = () => dispatch({type: "OPEN_SIDEBAR"})
+  const closeSidebar = () => dispatch({type: "CLOSE_SIDEBAR"})
 
   const value = useMemo(() => {
     return {
       ...state,
       openSidebar,
-      closeSidebar,
+      closeSidebar
     }
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.isSidebarOpen])
+
   return (
-    <>
-      <UIContext.Provider value={value}>{children}</UIContext.Provider>
-    </>
+    <UIContext.Provider value={value}>
+      {children}
+    </UIContext.Provider>
   )
 }
 
